@@ -26,7 +26,7 @@ public class TicTacToeGUI implements ActionListener{
         buttona1.addActionListener(this);buttona2.addActionListener(this);buttona3.addActionListener(this);buttonb1.addActionListener(this);buttonb2.addActionListener(this);buttonb3.addActionListener(this);buttonc1.addActionListener(this);buttonc2.addActionListener(this);buttonc3.addActionListener(this);
         label1= new JLabel("Number of times you argee: "+count);
         pannel.setBorder(BorderFactory.createEmptyBorder(30, 10, 30, 30));
-        pannel.setLayout(new GridLayout());
+        pannel.setLayout(new GridLayout(4,3));
         pannel.add(buttona1);pannel.add(buttona2);pannel.add(buttona3);pannel.add(buttonb1);pannel.add(buttonb2);pannel.add(buttonb3);pannel.add(buttonc1);pannel.add(buttonc2);pannel.add(buttonc3);
         pannel.add(label1);
         Frame.add(pannel, BorderLayout.CENTER);
@@ -42,7 +42,7 @@ public class TicTacToeGUI implements ActionListener{
 
     public void actionPerformed(ActionEvent e){
         count++;
-        label1.setText("Number of times you argee: "+count);
+        label1.setText("# of times you argee: "+count);
     }
     public void actionPerformed1(ActionEvent e){
         count++;

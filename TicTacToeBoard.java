@@ -34,7 +34,7 @@ public class TicTacToeBoard {
         || board2[0][2] == 1 && board2[1][2] == 1 && board2[2][2] == 1
         || board2[0][0] == 1 && board2[1][1] == 1 && board2[2][2] == 1
         || board2[0][2] == 1 && board2[1][1] == 1 && board2[2][0] == 1){
-            return 1;
+            return 1;//player 1 wins
         }
         else if(board2[0][0] == 2 && board2[0][1] == 2 && board2[0][2] == 2
         || board2[1][0] == 2 && board2[1][1] == 2 && board2[1][2] == 2
@@ -44,7 +44,7 @@ public class TicTacToeBoard {
         || board2[0][2] == 2 && board2[1][2] == 2 && board2[2][2] == 2
         || board2[0][0] == 2 && board2[1][1] == 2 && board2[2][2] == 2
         || board2[0][2] == 2 && board2[1][1] == 2 && board2[2][0] == 1){
-            return 2;
+            return 2;//player 2 wins
         }
         else if(board2[0][0] == 0
         || board2[1][0] == 0
@@ -55,9 +55,9 @@ public class TicTacToeBoard {
         || board2[0][2] == 0
         || board2[1][2] == 0
         || board2[2][2] == 0){
-            return 0;
+            return 0;//game still ongoing
         }
-        return -1;
+        return -1;//tie
     }
 
     int getCellContents(int r, int c){
@@ -69,3 +69,4 @@ public class TicTacToeBoard {
     }
 
 }
+//skill issue
