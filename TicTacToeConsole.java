@@ -1,8 +1,32 @@
 import java.util.Scanner;
 public class TicTacToeConsole {
 
-    private static int[][] parsePlayerInput(String coordinates) {
+    private static int[][] parsePlayerInput(String charNum) {
+        int[][] coordinates = new int[3][3];
+        int row;
+        int col;
 
+        if(charNum.substring(0,1).equals("a")) {
+            col = 0;
+        } else if (charNum.substring(0,1).equals("b")) {
+            col = 1;
+        } else if (charNum.substring(0,1).equals("c")) {
+            col = 2;
+        } else {
+
+        }
+
+        if(charNum.substring(1,2).equals("1")) {
+            row = 0;
+        } else if (charNum.substring(1,2).equals("2")) {
+            row = 1;
+        } else if (charNum.substring(1,2).equals("3")) {
+            row = 2;
+        } else {
+
+        }
+
+        return coordinates;
     }
 
     public static void main(String[] args) {
