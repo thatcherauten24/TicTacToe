@@ -1,31 +1,35 @@
 import java.util.Scanner;
 public class TicTacToeConsole {
 
-    private static int[][] parsePlayerInput(String charNum) {
-        int[][] coordinates = new int[3][3];
+    private static int[] parsePlayerInput(String charNum) {
         int row;
         int col;
+        int[] coordinates = new int[2];
 
         if(charNum.substring(0,1).equals("a")) {
             col = 0;
+            coordinates[1] = col;
         } else if (charNum.substring(0,1).equals("b")) {
             col = 1;
+            coordinates[1] = col;
         } else if (charNum.substring(0,1).equals("c")) {
             col = 2;
-        } else {
-
+            coordinates[1] = col;
         }
+
+        
 
         if(charNum.substring(1,2).equals("1")) {
             row = 0;
+            coordinates[0] = row;
         } else if (charNum.substring(1,2).equals("2")) {
             row = 1;
+            coordinates[0] = row;
         } else if (charNum.substring(1,2).equals("3")) {
             row = 2;
-        } else {
-
+            coordinates[0] = row;
         }
-
+        
         return coordinates;
     }
 
@@ -53,9 +57,13 @@ public class TicTacToeConsole {
             if (currentPlayer == 1) {
                 System.out.println("Player 1, please enter your move in the format shown above (a1, c2, etc)");
                 String player1Move = s.nextLine();
+                parsePlayerInput(player1Move);
+                currentPlayer = 2;
             } else { //currentPlayer = 2
                 System.out.println("Player 2, please enter your move in the format shown above (a1, c2, etc)");
                 String player2Move = s.nextLine();
+                parsePlayerInput(player2Move);
+                currentPlayer = 1;
             }
             
 
