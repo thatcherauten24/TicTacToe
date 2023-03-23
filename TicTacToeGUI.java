@@ -22,9 +22,9 @@ public class TicTacToeGUI implements ActionListener{
     public TicTacToeGUI(){
         Frame = new JFrame();
         pannel = new JPanel();
-        buttona1 = new JButton("Charles is gay");buttonb1 = new JButton("Charles is gay");buttonc1 = new JButton("Charles is gay");buttona2 = new JButton("Charles is gay");buttonb2 = new JButton("Charles is gay");buttonc2 = new JButton("Charles is gay");buttona3 = new JButton("Charles is gay");buttonb3 = new JButton("Charles is gay");buttonc3 = new JButton("Charles is gay");
+        buttona1 = new JButton("");buttonb1 = new JButton("");buttonc1 = new JButton("");buttona2 = new JButton("");buttonb2 = new JButton("");buttonc2 = new JButton("");buttona3 = new JButton("");buttonb3 = new JButton("");buttonc3 = new JButton("");
         buttona1.addActionListener(this);buttona2.addActionListener(this);buttona3.addActionListener(this);buttonb1.addActionListener(this);buttonb2.addActionListener(this);buttonb3.addActionListener(this);buttonc1.addActionListener(this);buttonc2.addActionListener(this);buttonc3.addActionListener(this);
-        label1= new JLabel("Number of times you argee: "+count);
+        label1= new JLabel();
         pannel.setBorder(BorderFactory.createEmptyBorder(30, 10, 30, 30));
         pannel.setLayout(new GridLayout(4,3));
         pannel.add(buttona1);pannel.add(buttona2);pannel.add(buttona3);pannel.add(buttonb1);pannel.add(buttonb2);pannel.add(buttonb3);pannel.add(buttonc1);pannel.add(buttonc2);pannel.add(buttonc3);
@@ -43,9 +43,10 @@ public class TicTacToeGUI implements ActionListener{
     public void actionPerformed(ActionEvent e){
         count++;
         label1.setText("# of times you argee: "+count);
+        if(e.getSource()==buttona1){
+            label1.setText("argee: "+count);// This is to firgure out what button was clicked
+        }
+        
     }
-    public void actionPerformed1(ActionEvent e){
-        count++;
-        label1.setText("Works: "+count);
-    }
+    
 }
