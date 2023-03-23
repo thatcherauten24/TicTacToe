@@ -1,3 +1,5 @@
+import javax.sql.rowset.spi.SyncResolver;
+
 public class TicTacToeBoard {
     private boolean [][] board = new boolean [][]{
     {true, true, true}, 
@@ -60,12 +62,25 @@ public class TicTacToeBoard {
         return -1;
     }
 
-    int getCellContents(int r, int c){
-        
+    public int getCellContents(int r, int c){
+        return board2[r][c];
     }
 
-    String toString(){
-
+    public String toString(){
+        String result = "";
+        for(int r = 0; r < 3; r ++){
+            if(r > 0){
+                result += "--";
+            }
+            for(int c = 0; c < 3; c ++){
+                result += board2[r][c];
+                result += "|";
+                if(c == 2){
+                    result += "\n";
+                }
+            }
+        }
+        return result;
     }
 
 }
