@@ -1,3 +1,5 @@
+import javax.sql.rowset.spi.SyncResolver;
+
 public class TicTacToeBoard {
     private boolean [][] board = new boolean [][]{
     {true, true, true}, 
@@ -34,7 +36,7 @@ public class TicTacToeBoard {
         || board2[0][2] == 1 && board2[1][2] == 1 && board2[2][2] == 1
         || board2[0][0] == 1 && board2[1][1] == 1 && board2[2][2] == 1
         || board2[0][2] == 1 && board2[1][1] == 1 && board2[2][0] == 1){
-            return 1;
+            return 1;//player 1 wins
         }
         else if(board2[0][0] == 2 && board2[0][1] == 2 && board2[0][2] == 2
         || board2[1][0] == 2 && board2[1][1] == 2 && board2[1][2] == 2
@@ -44,7 +46,7 @@ public class TicTacToeBoard {
         || board2[0][2] == 2 && board2[1][2] == 2 && board2[2][2] == 2
         || board2[0][0] == 2 && board2[1][1] == 2 && board2[2][2] == 2
         || board2[0][2] == 2 && board2[1][1] == 2 && board2[2][0] == 1){
-            return 2;
+            return 2;//player 2 wins
         }
         else if(board2[0][0] == 0
         || board2[1][0] == 0
@@ -55,17 +57,30 @@ public class TicTacToeBoard {
         || board2[0][2] == 0
         || board2[1][2] == 0
         || board2[2][2] == 0){
-            return 0;
+            return 0;//game still ongoing
         }
-        return -1;
+        return -1;//tie
     }
 
-    int getCellContents(int r, int c){
-        
+    public int getCellContents(int r, int c){
+        return board2[r][c];
     }
 
-    String toString(){
-
+    public String toString(){
+        String result = "";
+        for(int r = 0; r < 3; r ++){
+            if(r > 0){
+                result += "--";
+            }
+            for(int c = 0; c < 3; c ++){
+                result += board2[r][c];
+                result += "|";
+                if(c == 2){
+                    result += "\n";
+                }
+            }
+        }
+        return result;
     }
 
 }
