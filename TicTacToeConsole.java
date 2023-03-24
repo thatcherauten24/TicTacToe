@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class TicTacToeConsole {
 
-    private static int[] parsePlayerInput(String charNum) {
+    private int[] parsePlayerInput(String charNum) {
         int row;
         int col;
         int[] coordinates = new int[2];
@@ -15,10 +15,12 @@ public class TicTacToeConsole {
         } else if (charNum.substring(0,1).equals("c")) {
             col = 2;
             coordinates[1] = col;
+        } else {
+            col = -1;
+            coordinates[1] = col;
         }
 
         
-
         if(charNum.substring(1,2).equals("1")) {
             row = 0;
             coordinates[0] = row;
@@ -28,11 +30,17 @@ public class TicTacToeConsole {
         } else if (charNum.substring(1,2).equals("3")) {
             row = 2;
             coordinates[0] = row;
+        } else {
+            row = -1;
+            coordinates[0] = -1;
         }
         
         return coordinates;
     }
 
+    
+
+    //player 1 is X, player 2 is O
     public static void main(String[] args) {
         String board =
         "     a       b       c   \n         |       |       \n1        |       |       \n  _______|_______|_______\n         |       |       \n2        |       |       \n  _______|_______|_______\n3        |       |       \n         |       |       \n         |       |       ";
@@ -58,11 +66,13 @@ public class TicTacToeConsole {
                 System.out.println("Player 1, please enter your move in the format shown above (a1, c2, etc)");
                 String player1Move = s.nextLine();
                 parsePlayerInput(player1Move);
+                
                 currentPlayer = 2;
             } else { //currentPlayer = 2
                 System.out.println("Player 2, please enter your move in the format shown above (a1, c2, etc)");
                 String player2Move = s.nextLine();
                 parsePlayerInput(player2Move);
+
                 currentPlayer = 1;
             }
             

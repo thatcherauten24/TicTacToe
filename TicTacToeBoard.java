@@ -1,5 +1,3 @@
-import javax.sql.rowset.spi.SyncResolver;
-
 public class TicTacToeBoard {
     private boolean [][] board = new boolean [][]{
     {true, true, true}, 
