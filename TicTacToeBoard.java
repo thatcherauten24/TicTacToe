@@ -1,9 +1,4 @@
 public class TicTacToeBoard {
-    private boolean [][] board = new boolean [][]{
-    {true, true, true}, 
-    {true, true, true}, 
-    {true, true, true}
-    };
     private int [][] board2 = new int [][]{
         {0,0,0},
         {0,0,0},
@@ -13,8 +8,7 @@ public class TicTacToeBoard {
         if(r <= 3 && c <= 3 && r >= 1 && c >= 1){
             r --;
             c --;
-            if(board[r][c] == true){
-                board[r][c] = false;
+            if(board2[r][c] == 0){
                 return true;
             }
         }
@@ -22,6 +16,8 @@ public class TicTacToeBoard {
         }
 
     public void makeMove(int r, int c, int player){
+        r --;
+        c --;
         board2[r][c] = player;
     }
 
@@ -61,6 +57,8 @@ public class TicTacToeBoard {
     }
 
     public int getCellContents(int r, int c){
+        r --;
+        c --;
         return board2[r][c];
     }
 
