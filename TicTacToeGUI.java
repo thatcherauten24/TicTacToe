@@ -38,15 +38,97 @@ public class TicTacToeGUI implements ActionListener{
 
     public static void main(String[] args) {
         new TicTacToeGUI();
+        
+
+       
     }
 
     public void actionPerformed(ActionEvent e){
-        count++;
+        count++;TicTacToeBoard theBoard = new TicTacToeBoard();int currentPlayer = 1;
         label1.setText("# of times you argee: "+count);
-        if(e.getSource()==buttona1){
-            label1.setText("argee: "+count);// This is to firgure out what button was clicked
+        int row=-1;
+        int col=-1;
+        String playergoing = "";
+        if(theBoard.getGameStatus() == 0) {//checks player
+            if (currentPlayer == 1) {
+                label1.setText("Player 1 turn");
+                playergoing ="Player 1 turn";
+                currentPlayer = 2;
+            } else { //currentPlayer = 2
+                label1.setText("Player 2 turn");
+                playergoing ="Player 2 turn";
+                currentPlayer = 1;
+            }
         }
+        if(e.getSource()==buttona1){
+            //buttona1.setText("argee: "+count);                    // This is to firgure out what button was clicked
+            row = 1;
+            col = 1;
+        }else if(e.getSource()==buttona2){
+            row = 1;
+            col = 2;
+        }else if(e.getSource()==buttona3){
+            row = 1;
+            col = 3;
+        }else if(e.getSource()==buttonb1){
+            row = 2;
+            col = 1;
+        }else if(e.getSource()==buttonb2){
+            row = 2;
+            col = 2;
+        }else if(e.getSource()==buttonb3){
+            row = 2;
+            col = 3;
+        }else if(e.getSource()==buttonc1){
+            row = 3;
+            col = 1;
+        }else if(e.getSource()==buttonc2){
+            row = 3;
+            col = 2;
+        }else if(e.getSource()==buttonc3){
+            row = 3;
+            col = 3;
+        }
+
+        while(theBoard.isValidMove(row,col)==false){//TO check if move is good 
+            label1.setText("That is not possible, it is still "+playergoing);
+            if(e.getSource()==buttona1){
+                //buttona1.setText("argee: "+count);                    // This is to firgure out what button was clicked
+                row = 1;
+                col = 1;
+            }else if(e.getSource()==buttona2){
+                row = 1;
+                col = 2;
+            }else if(e.getSource()==buttona3){
+                row = 1;
+                col = 3;
+            }else if(e.getSource()==buttonb1){
+                row = 2;
+                col = 1;
+            }else if(e.getSource()==buttonb2){
+                row = 2;
+                col = 2;
+            }else if(e.getSource()==buttonb3){
+                row = 2;
+                col = 3;
+            }else if(e.getSource()==buttonc1){
+                row = 3;
+                col = 1;
+            }else if(e.getSource()==buttonc2){
+                row = 3;
+                col = 2;
+            }else if(e.getSource()==buttonc3){
+        }
+
+        
+        
+        
+        
         
     }
     
+        theBoard.makeMove(row, col, currentPlayer);
+        
 }
+}
+//player one is x's and player two is o's
