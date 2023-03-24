@@ -24,6 +24,8 @@ public class TicTacToeBoard {
         }
 
     public void makeMove(int r, int c, int player){
+        r --;
+        c --;
         board2[r][c] = player;
     }
 
@@ -63,6 +65,8 @@ public class TicTacToeBoard {
     }
 
     public int getCellContents(int r, int c){
+        r --;
+        c --;
         return board2[r][c];
     }
 
