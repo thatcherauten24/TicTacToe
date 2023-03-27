@@ -1,4 +1,5 @@
 import java.awt.GridLayout;
+import java.awt.Desktop.Action;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.BorderLayout;
@@ -17,6 +18,7 @@ public class TicTacToeGUI implements ActionListener{
     private JLabel label1;
     private JFrame Frame;
     private JPanel pannel;
+    public int currentPlayer=0;
     private JButton buttona1;private JButton buttonb1;private JButton buttonc1;private JButton buttona2;private JButton buttonb2;private JButton buttonc2;private JButton buttona3;private JButton buttonb3;private JButton buttonc3;
 
     public TicTacToeGUI(){
@@ -45,25 +47,27 @@ public class TicTacToeGUI implements ActionListener{
 
     public void actionPerformed(ActionEvent e){
         count++;TicTacToeBoard theBoard = new TicTacToeBoard();
-        int currentPlayer = 0;
         currentPlayer++;
-        if(currentPlayer>2){
+         
+        if(currentPlayer==3){
             currentPlayer=1;
         }
-        label1.setText("# of times you argee: "+count);
+        //label1.setText("# of times you argee: "+count);
         int row=-1;
         int col=-1;
         String playergoing = "";
         if(theBoard.getGameStatus() == 0) {//checks player
+            
             if (currentPlayer == 1) {
                 label1.setText("Player 1 turn");
                 playergoing ="Player 1 turn";
-                currentPlayer = 2;
-            } else { //currentPlayer = 2
+                
+            }if(currentPlayer == 2) { //
                 label1.setText("Player 2 turn");
                 playergoing ="Player 2 turn";
-                currentPlayer = 1;
+                
             }
+             
         
 
         // \/ This is to make row and col
@@ -136,7 +140,7 @@ public class TicTacToeGUI implements ActionListener{
         
         
     }
-    if(theBoard.isValidMove(row, col)==true){//changes the button text
+    //if(theBoard.isValidMove(row, col)==true){//changes the button text
         if(e.getSource()==buttona1){
             buttona1.setText(xoros(currentPlayer));
         }else if(e.getSource()==buttona2){
@@ -156,7 +160,7 @@ public class TicTacToeGUI implements ActionListener{
         }else if(e.getSource()==buttonc3){
             buttonc3.setText(xoros(currentPlayer));
         } 
-        }
+        //}
         theBoard.makeMove(row, col, currentPlayer);
         
 
