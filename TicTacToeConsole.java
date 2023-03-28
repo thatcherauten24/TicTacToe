@@ -56,11 +56,11 @@ public class TicTacToeConsole {
                 }
             } else if (xCoordinate == 1) {
                 if (yCoordinate == 0) { //1,0
-                    newBoard = board.substring(0, 65) + "X" + board.substring(66, board.length() - 1);
+                    newBoard = board.substring(0, 135) + "X" + board.substring(136, board.length() - 1);
                 } else if (yCoordinate == 1) { //1,1
-                    newBoard = board.substring(0, 137) + "X" + board.substring(138, board.length() - 1);
+                    newBoard = board.substring(0, 143) + "X" + board.substring(144, board.length() - 1);
                 } else if (yCoordinate == 2) { //1,2
-                    newBoard = board.substring(0, 209) + "X" + board.substring(210, board.length() - 1);
+                    newBoard = board.substring(0, 151) + "X" + board.substring(152, board.length() - 1);
                 } else { //1,-1
                     System.out.println("that is not a valid move");
                     newBoard = board;
@@ -69,11 +69,11 @@ public class TicTacToeConsole {
 
             } else if (xCoordinate == 2) {
                 if (yCoordinate == 0) { //2,0
-                    newBoard = board.substring(0, 73) + "X" + board.substring(74, board.length() - 1);
+                    newBoard = board.substring(0, 213) + "X" + board.substring(214, board.length() - 1);
                 } else if (yCoordinate == 1) { //2,1
-                    newBoard = board.substring(0, 145) + "X" + board.substring(146, board.length() - 1);
+                    newBoard = board.substring(0, 221) + "X" + board.substring(222, board.length() - 1);
                 } else if (yCoordinate == 2) { //2,2
-                    newBoard = board.substring(0, 217) + "X" + board.substring(218, board.length() - 1);
+                    newBoard = board.substring(0, 229) + "X" + board.substring(230, board.length() - 1);
                 } else { //2,-1
                     System.out.println("that is not a valid move");
                     newBoard = board;
@@ -91,7 +91,7 @@ public class TicTacToeConsole {
                 } else if (yCoordinate == 1) { //0,1
                     newBoard = board.substring(0, 65) + "O" + board.substring(66, board.length() - 1);
                 } else if (yCoordinate == 2) { //0,2
-                    newBoard = board.substring(0, 201) + "O" + board.substring(202, board.length() - 1);
+                    newBoard = board.substring(0, 73) + "O" + board.substring(74, board.length() - 1);
                 } else { //0,-1
                     System.out.println("that is not a valid move");
                     newBoard = board;
@@ -99,11 +99,11 @@ public class TicTacToeConsole {
                 }
             } else if (xCoordinate == 1) {
                 if (yCoordinate == 0) { //1,0
-                    newBoard = board.substring(0, 84) + "O" + board.substring(85, board.length() - 1);
+                    newBoard = board.substring(0, 135) + "O" + board.substring(136, board.length() - 1);
                 } else if (yCoordinate == 1) { //1,1
-                    newBoard = board.substring(0, 137) + "O" + board.substring(138, board.length() - 1);
+                    newBoard = board.substring(0, 143) + "O" + board.substring(144, board.length() - 1);
                 } else if (yCoordinate == 2) { //1,2
-                    newBoard = board.substring(0, 209) + "O" + board.substring(210, board.length() - 1);
+                    newBoard = board.substring(0, 151) + "O" + board.substring(152, board.length() - 1);
                 } else { //1,-1
                     System.out.println("that is not a valid move");
                     newBoard = board;
@@ -112,11 +112,11 @@ public class TicTacToeConsole {
 
             } else if (xCoordinate == 2) {
                 if (yCoordinate == 0) { //2,0
-                    newBoard = board.substring(0, 73) + "O" + board.substring(74, board.length() - 1);
+                    newBoard = board.substring(0, 213) + "O" + board.substring(214, board.length() - 1);
                 } else if (yCoordinate == 1) { //2,1
-                    newBoard = board.substring(0, 145) + "O" + board.substring(146, board.length() - 1);
+                    newBoard = board.substring(0, 221) + "O" + board.substring(222, board.length() - 1);
                 } else if (yCoordinate == 2) { //2,2
-                    newBoard = board.substring(0, 217) + "O" + board.substring(218, board.length() - 1);
+                    newBoard = board.substring(0, 229) + "O" + board.substring(230, board.length() - 1);
                 } else { //2,-1
                     System.out.println("that is not a valid move");
                     newBoard = board;
