@@ -5,6 +5,7 @@ public class TicTacToeBoard {
         {0,0,0}
     };
     public boolean isValidMove(int r, int c){
+        // see if move is possible
         if(r <= 3 && c <= 3 && r >= 1 && c >= 1){
             r --;
             c --;
@@ -16,6 +17,7 @@ public class TicTacToeBoard {
         }
 
     public void makeMove(int r, int c, int player){
+        // makes the move
         r --;
         c --;
         board2[r][c] = player;
@@ -57,12 +59,14 @@ public class TicTacToeBoard {
     }
 
     public int getCellContents(int r, int c){
+        // gets the cell contents
         r --;
         c --;
         return board2[r][c];
     }
 
     public String toString(){
+        // makes a board
         String result = "";
         for(int r = 0; r < 3; r ++){
             if(r > 0){
