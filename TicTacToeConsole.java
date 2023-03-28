@@ -44,43 +44,91 @@ public class TicTacToeConsole {
         if (playerNum == 1) {
             if (xCoordinate == 0) {
                 if (yCoordinate == 0) { //0,0
-                    newBoard = board.substring(0, 52) + "X" + board.substring(53, board.length() - 1);
+                    newBoard = board.substring(0, 57) + "X" + board.substring(58, board.length() - 1);
                 } else if (yCoordinate == 1) { //0,1
-                    newBoard = board.substring(0, 124) + "X" + board.substring(125, board.length() - 1);
+                    newBoard = board.substring(0, 65) + "X" + board.substring(66, board.length() - 1);
                 } else if (yCoordinate == 2) { //0,2
-                    newBoard = board.substring(0, 196) + "X" + board.substring(197, board.length() - 1);
+                    newBoard = board.substring(0, 73) + "X" + board.substring(74, board.length() - 1);
                 } else { //0,-1
                     System.out.println("that is not a valid move");
+                    newBoard = board;
+
                 }
             } else if (xCoordinate == 1) {
                 if (yCoordinate == 0) { //1,0
-                    newBoard = board.substring(0, 60) + "X" + board.substring(61, board.length() - 1);
+                    newBoard = board.substring(0, 65) + "X" + board.substring(66, board.length() - 1);
                 } else if (yCoordinate == 1) { //1,1
-                    newBoard = board.substring(0, 132) + "X" + board.substring(133, board.length() - 1);
+                    newBoard = board.substring(0, 137) + "X" + board.substring(138, board.length() - 1);
                 } else if (yCoordinate == 2) { //1,2
-                    newBoard = board.substring(0, 204) + "X" + board.substring(205, board.length() - 1);
+                    newBoard = board.substring(0, 209) + "X" + board.substring(210, board.length() - 1);
                 } else { //1,-1
                     System.out.println("that is not a valid move");
+                    newBoard = board;
+
                 }
 
             } else if (xCoordinate == 2) {
                 if (yCoordinate == 0) { //2,0
-                    newBoard = board.substring(0, 68) + "X" + board.substring(53, board.length() - 1);
+                    newBoard = board.substring(0, 73) + "X" + board.substring(74, board.length() - 1);
                 } else if (yCoordinate == 1) { //2,1
-                    newBoard = board.substring(0, 140) + "X" + board.substring(141, board.length() - 1);
+                    newBoard = board.substring(0, 145) + "X" + board.substring(146, board.length() - 1);
                 } else if (yCoordinate == 2) { //2,2
-                    newBoard = board.substring(0, 212) + "X" + board.substring(213, board.length() - 1);
+                    newBoard = board.substring(0, 217) + "X" + board.substring(218, board.length() - 1);
                 } else { //2,-1
                     System.out.println("that is not a valid move");
+                    newBoard = board;
+
                 }
 
             } else { //-1
                 System.out.println("that is not a valid move");
+                newBoard = board;
             }
         } else if (playerNum == 2) {
+            if (xCoordinate == 0) {
+                if (yCoordinate == 0) { //0,0
+                    newBoard = board.substring(0, 57) + "O" + board.substring(58, board.length() - 1);
+                } else if (yCoordinate == 1) { //0,1
+                    newBoard = board.substring(0, 65) + "O" + board.substring(66, board.length() - 1);
+                } else if (yCoordinate == 2) { //0,2
+                    newBoard = board.substring(0, 201) + "O" + board.substring(202, board.length() - 1);
+                } else { //0,-1
+                    System.out.println("that is not a valid move");
+                    newBoard = board;
 
+                }
+            } else if (xCoordinate == 1) {
+                if (yCoordinate == 0) { //1,0
+                    newBoard = board.substring(0, 84) + "O" + board.substring(85, board.length() - 1);
+                } else if (yCoordinate == 1) { //1,1
+                    newBoard = board.substring(0, 137) + "O" + board.substring(138, board.length() - 1);
+                } else if (yCoordinate == 2) { //1,2
+                    newBoard = board.substring(0, 209) + "O" + board.substring(210, board.length() - 1);
+                } else { //1,-1
+                    System.out.println("that is not a valid move");
+                    newBoard = board;
+
+                }
+
+            } else if (xCoordinate == 2) {
+                if (yCoordinate == 0) { //2,0
+                    newBoard = board.substring(0, 73) + "O" + board.substring(74, board.length() - 1);
+                } else if (yCoordinate == 1) { //2,1
+                    newBoard = board.substring(0, 145) + "O" + board.substring(146, board.length() - 1);
+                } else if (yCoordinate == 2) { //2,2
+                    newBoard = board.substring(0, 217) + "O" + board.substring(218, board.length() - 1);
+                } else { //2,-1
+                    System.out.println("that is not a valid move");
+                    newBoard = board;
+
+                }
+
+            } else { //-1
+                System.out.println("that is not a valid move");
+                newBoard = board;
+            }
         } else {
-
+            newBoard = board;
         }
         
 
@@ -90,7 +138,7 @@ public class TicTacToeConsole {
     //player 1 is X, player 2 is O
     public static void main(String[] args) {
         String board1 =
-        "     a       b       c   \n         |       |       \n1        |       |       \n  _______|_______|_______\n         |       |       \n2        |       |       \n  _______|_______|_______\n3        |       |       \n         |       |       \n         |       |       ";
+        "     a       b       c   \n         |       |       \n1        |       |       \n  _______|_______|_______\n         |       |       \n2        |       |       \n  _______|_______|_______\n         |       |       \n3        |       |       \n         |       |       ";
         System.out.println(board1);
                             // 0123456789012345678901234
         // System.out.println("     a       b       c   ");
@@ -112,13 +160,13 @@ public class TicTacToeConsole {
             if (currentPlayer == 1) {
                 System.out.println("Player 1, please enter your move in the format shown above (a1, c2, etc)");
                 String player1Move = s.nextLine();
-                printNewBoard(parsePlayerInput(player1Move)[0], parsePlayerInput(player1Move)[1], board1);
+                printNewBoard(parsePlayerInput(player1Move)[0], parsePlayerInput(player1Move)[1], 1, board1);
                 
                 currentPlayer = 2;
             } else { //currentPlayer = 2
                 System.out.println("Player 2, please enter your move in the format shown above (a1, c2, etc)");
                 String player2Move = s.nextLine();
-                printNewBoard(parsePlayerInput(player2Move)[0], parsePlayerInput(player2Move)[1], board1);
+                printNewBoard(parsePlayerInput(player2Move)[0], parsePlayerInput(player2Move)[1], 2, board1);
                 
                 currentPlayer = 1;
             }
